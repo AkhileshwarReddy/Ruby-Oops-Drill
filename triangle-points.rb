@@ -17,20 +17,10 @@ class Triangle
     end
 
     def is_equal triangle
-        if triangle.points.length == @points.length
-            if triangle.points[0] == @points[0] and triangle.points[1] == @points[1] and triangle.points[2] == @points[2]
-                return true
-            end
-        end
-        return false
+        return triangle.points.sort == @points.sort
     end
 
     def __eq__ triangle
-        if triangle.points.length == @points.length
-            if triangle.points[0] == @points[0] and triangle.points[1] == @points[1] and triangle.points[2] == @points[2]
-                return true
-            end
-        end
-        return false
+        return triangle.points.sort == @points.sort
     end
 end
